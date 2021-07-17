@@ -334,6 +334,10 @@ open class SectionsTableView: UITableView, UITableViewDelegate, UITableViewDataS
         return patternImage ?? UIImage()
     }
 
+    open override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        endEditing(true)
+    }
 }
 
 public enum RowType {
